@@ -18,9 +18,7 @@ export default class HashTable {
    * @see StringHasher
    */
 	constructor(tableSize, stringHasher) {
-    this.tableSize = tableSize;
-    this.stringHasher = stringHasher;
-    this.wordArray = this.createArray(tableSize);
+
 	}
 
 
@@ -29,10 +27,7 @@ export default class HashTable {
    * in the hash table.  If it is, this method has no effect.
    */
 	add(key) {
-    let index = Math.floor(this.stringHasher.hash(key) % this.tableSize);
-    if (!this.wordArray[index].includes(key)) {
-      this.wordArray[index].push(key);
-    }
+
 	}
 	
 
@@ -41,8 +36,7 @@ export default class HashTable {
 	* hash table, false otherwise.
   */
 	lookup(key) {
-    const index = Math.floor(this.stringHasher.hash(key) % this.tableSize);
-    return (this.wordArray[index].includes(key)) ? true : false;
+
 	}
 	
 
@@ -51,20 +45,11 @@ export default class HashTable {
    * appears in the hash table.  If it doesn't, this method has no effect.
   */
 	remove(key) {
-    const index = Math.floor(this.stringHasher.hash(key) % this.tableSize);
-    const currentArray = this.wordArray[index];
-    const elementIndex = currentArray.indexOf(key);
-    if (elementIndex > -1) {
-      currentArray.splice(elementIndex, 1);
-    }
+
   }
   
   createArray(size) {
-    const array = [];
-    for(let i=0; i<size; i++) {
-      array.push(new Array());
-    }
-    return array;
+
   }
 
 }
