@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    flex-direction: column;
+    margin: 1.25vw 7vw;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#myInputs {
+    margin-top: 5px;
+    display: flex;
+    padding: 15px;
+    border-radius: 0;
+    border: none;
+    background-color: #f4f0ea;
+
+}
+.input_area {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.info_container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 15px;
+}
+.col-50 {
+    width: 50%;
+    text-align: center;
+    line-height: 200%;
+}
